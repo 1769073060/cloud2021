@@ -28,7 +28,7 @@ public class PaymentController {
 
 
     @PostMapping(value = "create")
-    public CommonResult<Payment> create(Payment payment){
+    public CommonResult<Payment> create(@RequestBody Payment payment){
         boolean save = iPaymentService.save(payment);
         log.info("插入返回值{}"+save);
         if(save==true){
