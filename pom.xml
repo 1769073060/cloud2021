@@ -31,6 +31,7 @@
         <druid.version>1.2.11</druid.version>
         <mybatis.spring.boot.version>2.2.2</mybatis.spring.boot.version>
         <myabtis.plus.core>3.4.2</myabtis.plus.core>
+        <spring.boot.version>2.3.6.RELEASE</spring.boot.version>
     </properties>
 
     <!-- 子模块继承之后，提供作用：锁定版本+子modlue不用写groupId和version  -->
@@ -99,9 +100,17 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-devtools</artifactId>
+                <version>${spring.boot.version}</version>
                 <scope>runtime</scope>
                 <optional>true</optional>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring.boot.version}</version>
+                <scope>test</scope>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -110,6 +119,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.4.11</version>
                 <configuration>
                     <fork>true</fork>
                     <addResources>true</addResources>
@@ -119,6 +129,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.3.6.RELEASE</version>
                 <configuration>
                     <fork>true</fork>
                     <addResources>true</addResources>
