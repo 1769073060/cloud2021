@@ -57,11 +57,11 @@ public class CodeGenerator {
 //
 //        // 数据源配置
 //        DataSourceConfig dsc = new DataSourceConfig();
-//        dsc.setUrl("jdbc:mysql://120.79.7.36:3310/cloud2021?characterEncoding=utf8&serverTimezone=UTC");//?useUnicode=true&useSSL=false&characterEncoding=utf8
+//        dsc.setUrl("jdbc:mysql://120.0.0.1:3310/cloud2021?characterEncoding=utf8&serverTimezone=UTC");//?useUnicode=true&useSSL=false&characterEncoding=utf8
 //        // dsc.setSchemaName("public");
 //        dsc.setDriverName("com.mysql.jdbc.Driver");
 //        dsc.setUsername("root");
-//        dsc.setPassword("rzkruizhukai123.");
+//        dsc.setPassword("密码");
 //        mpg.setDataSource(dsc);
 //
 //        // 包配置

@@ -48,7 +48,10 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.4.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.rzk</groupId>
+            <artifactId>cloud-api-commons</artifactId>
+        </dependency>
 
     </dependencies>
 </project>

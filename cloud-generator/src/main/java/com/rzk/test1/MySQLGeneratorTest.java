@@ -20,8 +20,7 @@ public class MySQLGeneratorTest extends BaseGeneratorTest {
      * 数据源配置
      */
     private static final DataSourceConfig DATA_SOURCE_CONFIG = new DataSourceConfig
-            .Builder("jdbc:mysql://" +
-            "3310/cloud2021?characterEncoding=utf8&serverTimezone=UTC","root","rzkruizhukai123.")
+            .Builder("jdbc:mysql://120.0.0.1:3310/cloud2021?characterEncoding=utf8&serverTimezone=UTC","root","密码")
             .schema("rzk")
             .build();
 

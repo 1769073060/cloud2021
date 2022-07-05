@@ -18,10 +18,10 @@ public class NewCodeGenerator {
 
     public static void main(String[] args) {
 
-//    new DataSourceConfig.Builder("jdbc:mysql://120.79.7.36:3310/cloud2021?characterEncoding=utf8&serverTimezone=UTC","root","rzkruizhukai123.")
+//    new DataSourceConfig.Builder("jdbc:mysql://120.0.0.1:3310/cloud2021?characterEncoding=utf8&serverTimezone=UTC","root","密码")
 //            .build();
         String projectPath = System.getProperty("user.dir");
-    FastAutoGenerator.create("jdbc:mysql:///cloud2021?characterEncoding=utf8&serverTimezone=UTC","root","rzkruizhukai123.")
+    FastAutoGenerator.create("jdbc:mysql://120.0.0.1:3310/cloud2021?characterEncoding=utf8&serverTimezone=UTC","root","密码")
             .globalConfig(builder -> {
         builder.author("rzk") // 设置作者
                 .enableSwagger() // 开启 swagger 模式
@@ -48,7 +48,7 @@ public class NewCodeGenerator {
 
 
 /**
-    FastAutoGenerator.create("jdbc:mysql://120.79.7.36:3310/cloud2021?characterEncoding=utf8&serverTimezone=UTC","root","rzkruizhukai123.")
+    FastAutoGenerator.create("jdbc:mysql://120.0.0.1:3310/cloud2021?characterEncoding=utf8&serverTimezone=UTC","root","密码")
             // 全局配置
             .globalConfig((scanner, builder) -> builder.author(scanner.apply("请输入作者名称？")).fileOverride())
             // 包配置

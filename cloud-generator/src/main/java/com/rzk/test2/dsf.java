@@ -13,7 +13,7 @@ public class dsf {
     public static void main(String[] args) {
         String projectPath = System.getProperty("user.dir");
 
-        FastAutoGenerator.create("jdbc:mysql://:3310/cloud2021?characterEncoding=utf8&serverTimezone=UTC","root","")
+        FastAutoGenerator.create("jdbc:mysql://120.0.0.1:3310/cloud2021?characterEncoding=utf8&serverTimezone=UTC","root","密码")
                 // 全局配置
                 .globalConfig((scanner, builder) -> builder.author(scanner.apply("请输入作者名称？"))
                         .outputDir(projectPath))// 指定输出目录
@@ -22,7 +22,7 @@ public class dsf {
                 .packageConfig((scanner, builder)
                         -> builder.parent(scanner.apply("请输入包名？"))
                         .moduleName(scanner.apply("请输入父包模块名？"))
-                        .pathInfo(Collections.singletonMap(OutputFile.xml, "/src/main/resources/com/rzk/mapper/"))
+                        .pathInfo(Collections.singletonMap(OutputFile.xml, projectPath+"/src/main/resources/mapper/"))
 
                 )
                 // 策略配置
