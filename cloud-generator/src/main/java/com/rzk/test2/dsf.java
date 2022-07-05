@@ -13,7 +13,7 @@ public class dsf {
     public static void main(String[] args) {
         String projectPath = System.getProperty("user.dir");
 
-        FastAutoGenerator.create("jdbc:mysql://:3310/cloud2021?characterEncoding=utf8&serverTimezone=UTC","root","rzkruizhukai123.")
+        FastAutoGenerator.create("jdbc:mysql://:3310/cloud2021?characterEncoding=utf8&serverTimezone=UTC","root","")
                 // 全局配置
                 .globalConfig((scanner, builder) -> builder.author(scanner.apply("请输入作者名称？"))
                         .outputDir(projectPath))// 指定输出目录
