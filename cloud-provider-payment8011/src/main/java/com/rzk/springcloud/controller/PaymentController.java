@@ -28,32 +28,32 @@ public class PaymentController {
 
 
     @PostMapping(value = "create")
-    public CommonResult<Payment> create(@RequestBody Payment payment){
+    public CommonResult create(@RequestBody Payment payment){
         boolean save = iPaymentService.save(payment);
         log.info("插入返回值{}"+save);
         if(save==true){
-            return new CommonResult<>(200,"插入成功");
+            return new CommonResult(200,"插入成功");
         }else {
-            return new CommonResult<>(444,"插入失败");
+            return new CommonResult(444,"插入失败");
         }
     }
 
 
     @GetMapping(value = "getId/{id}")
-    public CommonResult<Payment> getByIdPayment(@PathVariable("id") Long id){
+    public CommonResult getByIdPayment(@PathVariable("id") Long id){
         Payment byId = iPaymentService.getById(id);
         log.info("根据id查询对象{}"+byId);
         if (byId!=null){
-            return new CommonResult<Payment>(200,"查询成功",byId);
+            return new CommonResult(200,"查询成功",byId);
         }else{
-            return new CommonResult<>(444,"查询失败",byId);
+            return new CommonResult(444,"查询失败",byId);
         }
     }
 
     @GetMapping(value = "list")
-    public CommonResult<Payment> getList(){
+    public CommonResult getList(){
         List<Payment> list = iPaymentService.list();
         log.info("查询全部{}"+list);
-        return new CommonResult<Payment>(200,"查询成功",list);
+        return new CommonResult(200,"查询成功",list);
     }
 }

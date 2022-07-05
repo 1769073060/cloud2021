@@ -6,9 +6,9 @@ spring:
     name: cloud-payment-service
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql:///cloud2021?characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://120.0.0.1:3310/cloud2021?characterEncoding=utf8&useSSL=false
     username: root
-    password:
+    password: 密码
     type: com.alibaba.druid.pool.DruidDataSource
     #Druid 配置
     filters: stat
@@ -32,3 +32,11 @@ spring:
 mybatis:
   mapper-locations: classpath:/mapper/*.xml
   type-aliases-package: com.rzk.springcloud.pojo
+
+
+eureka:
+  client:
+    register-with-eureka: true # 是否要注册到配置中心
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7011/eureka

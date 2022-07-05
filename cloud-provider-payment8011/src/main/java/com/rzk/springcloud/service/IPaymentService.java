@@ -12,8 +12,4 @@ import com.rzk.springcloud.pojo.Payment;
  * @since 2022-07-02
  */
 public interface IPaymentService extends IService<Payment> {
-
-    int create(Payment payment);
-
-    Payment getPaymentById(Long id);
 }

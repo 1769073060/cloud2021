@@ -6,7 +6,6 @@ import com.rzk.springcloud.dao.PaymentDao;
 import com.rzk.springcloud.service.IPaymentService;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 
 /**
  * <p>
@@ -19,17 +18,4 @@ import javax.annotation.Resource;
 @Service
 public class PaymentServiceImpl extends ServiceImpl<PaymentDao, Payment> implements IPaymentService {
 
-    @Resource
-    private PaymentDao paymentDao;
-
-
-    @Override
-    public int create(Payment payment) {
-        return paymentDao.insert(payment);
-    }
-
-    @Override
-    public Payment getPaymentById(Long id) {
-        return paymentDao.selectById(id);
-    }
 }
