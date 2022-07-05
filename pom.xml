@@ -11,6 +11,8 @@
         <module>cloud-provider-payment8011</module>
         <module>cloud-generator</module>
         <module>cloud-consumer-order8012</module>
+        <module>cloud-api-commons</module>
+        <module>cloud-eureka-server7011</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -32,6 +34,7 @@
         <mybatis.spring.boot.version>2.2.2</mybatis.spring.boot.version>
         <myabtis.plus.core>3.4.2</myabtis.plus.core>
         <spring.boot.version>2.3.6.RELEASE</spring.boot.version>
+        <cloud.api.commons>1.0-SNAPSHOT</cloud.api.commons>
     </properties>
 
     <!-- 子模块继承之后，提供作用：锁定版本+子modlue不用写groupId和version  -->
@@ -110,6 +113,13 @@
                 <version>${spring.boot.version}</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>com.rzk</groupId>
+                <artifactId>cloud-api-commons</artifactId>
+                <version>${cloud.api.commons}</version>
+            </dependency>
+
+
 
         </dependencies>
     </dependencyManagement>
@@ -126,7 +136,7 @@
                 </configuration>
             </plugin>
             <!--配置热部署需要该配置-->
-            <plugin>
+            <!--<plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>2.3.6.RELEASE</version>
@@ -134,7 +144,7 @@
                     <fork>true</fork>
                     <addResources>true</addResources>
                 </configuration>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 
