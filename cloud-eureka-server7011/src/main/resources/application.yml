@@ -1,0 +1,19 @@
+server:
+  port: 7011
+
+
+eureka:
+  instance:
+    hostname: localhost
+
+  client:
+    register-with-eureka: false # 要不要相互注册
+    fetch-registry: false # 是否要抓取注册信息
+    service-url:
+      defaultZone: http://localhost:7011/eureka
+
+
+
+
+
+
